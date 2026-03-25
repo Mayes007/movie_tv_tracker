@@ -1,0 +1,114 @@
+/* ===== Global Styles ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0b0b0b;
+  color: rgb(255, 255, 255);
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #111;
+  border-bottom: 2px solid gold;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: rgb(253, 253, 253);
+}
+
+/* ===== Buttons ===== */
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: gold;
+  color: black;
+}
+
+/* Status buttons container */
+.status-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ===== Media Grid ===== */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 10px 20px;
+}
+
+/* ===== Media Card ===== */
+.media-card {
+  background-color: #91265d;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+.media-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: rgb(114, 203, 255);
+}
+
+.media-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #f7f4f4;
+}
+
+/* ===== Page Titles ===== */
+h1 {
+  text-align: center;
+  color: rgb(16, 193, 241);
+  margin-top: 20px;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 600px) {
+  .media-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+}
